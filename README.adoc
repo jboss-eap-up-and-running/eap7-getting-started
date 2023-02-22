@@ -1,4 +1,4 @@
-= Hello World
+= Getting Started with JBoss EAP 7 on OpenShift
 
 
 == The Application
