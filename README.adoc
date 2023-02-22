@@ -2,7 +2,7 @@
 
 
 == The Application
-The `src/main` folder contains a simple 'Hello world' style Java application using a servlet and a CDI bean.
+The `src/main` folder contains a simple 'Hello world' style Jakarta EE application using JAX-RS.
 
 == Deploying the Quickstart
 Make sure you have done all the link:../RUNNING_ON_OPENSHIFT.adoc#_prerequisites[prerequisites] and link:../RUNNING_ON_OPENSHIFT.adoc#_selectingcreating_a_project[selected/created a project].
@@ -10,25 +10,20 @@ Make sure you have done all the link:../RUNNING_ON_OPENSHIFT.adoc#_prerequisites
 Then install the Helm chart contained under link:./charts/helm.yaml[charts/helm.yaml] to install the application into OpenShift.
 [source,shell]
 ----
-helm install helloworld -f charts/helm.yaml jboss-eap/eap74
+helm install eap7-getting-started -f charts/helm.yaml jboss-eap/eap74
 ----
 See the link:../RUNNING_ON_OPENSHIFT.adoc#_deploying_with_helm[Deploying with Helm] section for information about when the application will be ready.
 
 == Running the application
 
-To see the output of the application, you can run the following command:
+To run the application, you can access it through its OpenShift route:
 
 [source,shell]
 ----
-curl https://$(oc get route helloworld --template='{{ .spec.host }}')
+echo https://$(oc get route eap7-getting-started --template='{{ .spec.host }}')
 ----
-You should see the following output:
-[source,shell]
-----
-<html><head><title>helloworld</title></head><body>
-<h1>Hello World!</h1>
-</body><small>This EAP application has successfully been deployed on OpenShift.</small></html>
-----
+
+If you use this URL, you will see the welcome page of the application.
 
 == Explaining the application configuration
 
