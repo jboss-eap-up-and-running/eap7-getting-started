@@ -5,14 +5,14 @@
 The `src/main` folder contains a simple 'Hello world' style Jakarta EE application using JAX-RS.
 
 == Deploying the Quickstart
-Make sure you have done all the https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#prerequisites[prerequisites] and https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#selectingcreating-a-project[selected/created a project].
+Make sure you have done all the https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#prerequisites[prerequisites] and https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#selecting_creating_a_project[selected/created a project].
 
 Then install the Helm chart contained under link:./charts/helm.yaml[charts/helm.yaml] to install the application into OpenShift.
 [source,shell]
 ----
 helm install eap7-getting-started -f charts/helm.yaml jboss-eap/eap74
 ----
-See the https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#deploying-with-helm[Deploying with Helm] section for information about when the application will be ready.
+See the https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#deploying_with_helm[Deploying with Helm] section for information about when the application will be ready.
 
 == Running the application
 
@@ -27,4 +27,4 @@ If you use this URL, you will see the welcome page of the application.
 
 == Explaining the application configuration
 
-This application is extremely simple, so apart from the standard information in https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#introduction-to-helm-charts[Introduction to Helm Charts], link:./charts/helm.yaml[./charts/helm.yaml] contains no additional information.
+This application is extremely simple, so apart from the standard information in https://github.com/jboss-eap-up-and-running/docs/blob/main/RUNNING_ON_OPENSHIFT.adoc#introduction_to_helm_charts[Introduction to Helm Charts], link:./charts/helm.yaml[./charts/helm.yaml] contains no additional information.
